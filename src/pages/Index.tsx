@@ -1,14 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import MainAppLayout from '@/components/layout/MainAppLayout';
+import LoginForm from '@/components/UserLogin/LoginForm';
 
-const Index = () => {
+/**
+ * IndexPage serves as the main entry point for the user login view.
+ * It composes the `MainAppLayout` and the `LoginForm` to create the complete page.
+ * 
+ * The `MainAppLayout` provides the overall page structure, centering the content vertically and horizontally.
+ * The `LoginForm` component contains all the form logic, fields, and actions for user authentication.
+ */
+const IndexPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <MainAppLayout>
+      <LoginForm />
+    </MainAppLayout>
   );
 };
 
-export default Index;
+export default IndexPage;
